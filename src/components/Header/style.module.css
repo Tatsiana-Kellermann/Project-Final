@@ -1,0 +1,149 @@
+.header {
+    max-width: 1380px;
+    height: 115px;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: 80px 150px auto 100px;
+    gap: 20px;
+    align-items: center;
+    justify-items: center;
+  }
+  .catalog_btn {
+    width: 125px;
+    height: 50px;
+    background: #339933;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 30px;
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+  }
+  .nav {
+    display: flex;
+    gap: 50px;
+    justify-self: end;
+    padding: 0 50px;
+  }
+  .nav_link {
+    font-weight: 500;
+    font-size: 18px;
+    color: #000000;
+    padding: 10px 0;
+  }
+  .active {
+    color: #787777;
+  }
+  .cart_icon {
+    cursor: pointer;
+  }
+  .burger {
+    display: none;
+    height: 40px;
+    width: 40px;
+    margin-right: 10px;
+    position: relative;
+  }
+  .burger span,
+  .burger span::before,
+  .burger span::after {
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    cursor: pointer;
+    background: #909090;
+    transition: 0.3s;
+    border-radius: 10px;
+    display: block;
+  }
+  .burger span::before {
+    content: "";
+    top: -12px;
+    transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .burger span {
+    top: 20px;
+  }
+  .burger span::after {
+    content: "";
+    bottom: -12px;
+    transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  
+  .burger span.active::before {
+    content: "";
+    top: 0;
+    transform: rotate(45deg);
+    transition: top 300ms, transform 300ms cubic-bezier(0.68, -0.55, 0, 1.55);
+  }
+  .burger span.active::after {
+    content: "";
+    bottom: 0;
+    transform: rotate(-45deg);
+    transition: top 300ms, transform 300ms cubic-bezier(0.68, -0.55, 0, 1.55);
+  }
+  .burger span.active {
+    background: transparent;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 960px) {
+    .header {
+      gap: 20px;
+    }
+    .logo {
+      margin-left: 10px;
+    }
+    .nav {
+      gap: 20px;
+      padding: 0;
+    }
+  }
+  
+  @media (max-width: 720px) {
+    .container {
+      width: 100%;
+      position: fixed;
+      background: white;
+      z-index: 50;
+      border-bottom: 1px solid rgb(220, 220, 220);
+    }
+    .header {
+      height: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .icons {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+    }
+    .catalog_btn {
+      display: none;
+    }
+    .nav_link {
+      font-size: 20px;
+    }
+    .nav {
+      display: none;
+    }
+    .burger {
+      display: block;
+    }
+    .logo {
+      width: 50px;
+    }
+    .nav_link {
+      font-size: 20px;
+    }
+  }
+  @media (max-width: 420px) {
+    .nav_link {
+      font-size: 18px;
+    }
+  }

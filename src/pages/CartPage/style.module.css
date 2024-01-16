@@ -1,0 +1,38 @@
+.basket_page {
+    max-width: 1345px;
+    margin: 40px auto 90px;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: auto minmax(350px, 500px);
+    gap: 60px;
+  }
+  .basket_items {
+    display: flex;
+    flex-direction: column;
+  }
+  .link_to_shop {
+    font-weight: 500;
+    font-size: 20px;
+    align-self: flex-end;
+    color: rgb(64, 64, 64);
+    text-decoration: none;
+    padding: 35px 0;
+  }
+  
+  @media (max-width: 960px) {
+    .basket_page {
+      max-width: 95%;
+    }
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  @media (max-width: 720px) {
+    .basket_page {
+      padding-top: 120px;
+      margin: 0 auto 90px;
+    }
+  }
